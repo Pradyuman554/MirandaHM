@@ -504,7 +504,7 @@ nav {
   transition: 0.3s;
 }
 
-.menu__items li:hover :is(h4, p) {
+.menu__items li:hover :is(h4, h3, p) {
   color: var(--white);
 }
 
