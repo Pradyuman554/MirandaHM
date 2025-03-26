@@ -24,24 +24,25 @@
         </div>
         <ul class="nav__links" id="nav-links">
           <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About us</a></li>
           <li><a href="rooms-features.html">Rooms & Features</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="menu-news.html">Menu & News</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
         </ul>
       </div>
     </nav>
 
     <header class="header" id="home">
       <div class="section__container header__container">
-        <p class="section__subheader">ABOUT US</p>
         <h1>The Perfect<br />Base For You</h1>
-        <button class="btn">Take A Tour</button>
+        <button class="btn" onclick="window.location.href='rooms-features.html'">Take A Tour</button>
       </div>
     </header>
 
     <section class="booking">
       <div class="section__container booking__container">
-        <form action="/">
+        <form action="/" id="bookingForm">
           <div class="input__group">
             <label for="arrival">Arrival Date</label>
             <input type="text" placeholder="Your Arrival Date" />
@@ -54,135 +55,27 @@
             <label for="guests">Guests</label>
             <input type="text" placeholder="No Of Guests" />
           </div>
-          <button class="btn">Check Availability</button>
+          <button class="btn" type="button" id="checkBtn">Check Availability</button>
         </form>
       </div>
     </section>
 
-    <section class="about" id="about">
-      <div class="section__container about__container">
-        <div class="about__grid">
-          <div class="about__image">
-            <img src="assets/about-1.jpg" alt="about" />
-          </div>
-          <div class="about__card">
-            <span><i class="ri-user-line"></i></span>
-            <h4>Strong Team</h4>
-            <p>
-              Unlocking Hospitality Excellence And Ensures Your Perfect Stay
-            </p>
-          </div>
-          <div class="about__image">
-            <img src="assets/about-2.jpg" alt="about" />
-          </div>
-          <div class="about__card">
-            <span><i class="ri-calendar-check-line"></i></span>
-            <h4>Luxury Room</h4>
-            <p>Experience Unrivaled Luxury at Our Exquisite Luxury Rooms</p>
-          </div>
-        </div>
-        <div class="about__content">
-          <p class="section__subheader">ABOUT US</p>
-          <h2 class="section__header">Discover Our Underground</h2>
-          <p class="section__description">
-            Welcome to a hidden realm of extraordinary accommodations where
-            luxury, comfort, and adventure converge. Our underground hotels
-            offer an unparalleled escape from the ordinary, inviting you to
-            explore a subterranean world of wonders.
-          </p>
-          <button class="btn">Book Now</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="intro">
-      <div class="section__container intro__container">
-        <div class="intro__cotent">
-          <p class="section__subheader">INTRO VIDEO</p>
-          <h2 class="section__header">Meet With Our Luxury Place</h2>
-          <p class="section__description">
-            Whether you're seeking a cozy and exclusive hideaway or an immersive
-            journey beneath the surface, hotel star promises to be an
-            unforgettable stay, where the depths of comfort and excitement await
-            your arrival.
-          </p>
-          <button class="btn">Book Now</button>
-        </div>
-        <div class="intro__video">
-          <video src="assets/luxury.mp4" autoplay muted loop></video>
-        </div>
-      </div>
-    </section>
-
     <footer class="footer">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <div class="logo footer__logo">
-            <div>H</div>
-            <span>HOTEL<br />STAR</span>
-          </div>
-          <p class="section__description">
-            Experience luxury and comfort with world-class hospitality. Enjoy a seamless stay with top-tier amenities, personalized services, and an unforgettable experience..
-          </p>
-          <ul class="footer__socials">
-            <li>
-              <a href="#"><i class="ri-youtube-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-instagram-line"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-facebook-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-linkedin-fill"></i></a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Services</h4>
-          <div class="footer__links">
-            <li><a href="#">Online Booking</a></li>
-            <li><a href="#">Room Customization</a></li>
-            <li><a href="#">Virtual Tours</a></li>
-            <li><a href="#">Special Offers</a></li>
-            <li><a href="#">Concierge Services</a></li>
-            <li><a href="#">Customer Support</a></li>
-          </div>
-        </div>
-        <div class="footer__col">
-          <h4>Contact Us</h4>
-          <div class="footer__links">
-            <li>
-              <span><i class="ri-phone-fill"></i></span>
-              <div>
-                <h5>Phone Number</h5>
-                <p>+91 78761 246100</p>
-              </div>
-            </li>
-            <li>
-              <span><i class="ri-record-mail-line"></i></span>
-              <div>
-                <h5>Email</h5>
-                <p>info@hotelSTAR.com</p>
-              </div>
-            </li>
-            <li>
-              <span><i class="ri-map-pin-2-fill"></i></span>
-              <div>
-                <h5>Location</h5>
-                <p>First St. NYC</p>
-              </div>
-            </li>
-          </div>
-        </div>
-      </div>
       <div class="footer__bar">
-        Copyright © 2025 Web Design Mastery. All rights reserved.
+        Copyright © 2025 Hem Tanya Sharma. All rights reserved.
       </div>
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
+    
+    <script>
+      document.getElementById("checkBtn").addEventListener("click", function () {
+        this.textContent = "Accommodation is available! ✅";
+        this.style.backgroundColor = "#486F8C";
+        this.style.color = "white";
+        this.style.fontFamily = "'Playfair Display', serif";
+      });
+    </script>
   </body>
 </html>

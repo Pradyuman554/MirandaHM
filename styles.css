@@ -11,6 +11,30 @@
   --header-font: "Playfair Display", serif;
 }
 
+.room__details {
+  display: flex;
+  align-items: center; /* Align image and text in the center */
+  justify-content: center; /* Center the whole section */
+  gap: 40px; /* Space between image and text */
+  text-align: left; /* Align text properly */
+  margin: 40px 0; /* Margin from top and bottom */
+}
+
+.room__details img {
+  width: 40%; /* Adjust image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Smooth edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.room__details .info {
+  width: 50%; /* Control text width */
+}
+
+.bullets {
+  margin-left: 18px; /* Adjust as needed */
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -432,7 +456,20 @@ nav {
   list-style: none;
   margin-block: 4rem;
   display: grid;
-  gap: 1rem 4rem;
+  gap: 1rem;
+}
+
+@media (width > 480px) {
+  .menu__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width > 768px) {
+  .menu__items {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
 
 .menu__items li {
@@ -648,7 +685,7 @@ nav {
 
 @media (width > 480px) {
   .about__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .about__image:nth-child(1) {
@@ -665,11 +702,11 @@ nav {
   }
 
   .menu__images {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .menu__banner {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .news__grid {
